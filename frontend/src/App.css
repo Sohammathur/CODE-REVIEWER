@@ -1,0 +1,86 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+    height: 100%;
+    width: 100%;
+    background-color: #121212;
+    color: white;
+}
+
+.header {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 1rem 2rem;
+    background-color: #1f1f1f;
+    border-bottom: 1px solid #333;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #61dafb;
+    letter-spacing: 1px;
+}
+
+main {
+    height: calc(100% - 60px);
+    width: 100%;
+    padding: 1.5rem;
+    display: flex;
+    gap: 1rem;
+}
+
+main .left,
+main .right {
+    height: 100%;
+    border-radius: 0.5rem;
+}
+
+main .left {
+    background-color: #000000;
+    position: relative;
+    flex-basis: 40%;
+}
+
+.left .code,
+.code pre,
+.code pre code {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    border-radius: 0.5rem;
+    background-color: #1b1a1a;
+}
+
+main .left .review {
+    position: absolute;
+    bottom: 1.5rem;
+    right: 1.5rem;
+    background-color: rgb(186, 186, 235);
+    color: #000000;
+    padding: 0.5rem 2rem;
+    font-weight: 500;
+    cursor: pointer;
+    user-select: none;
+    border-radius: 0.7rem;
+    transition: background-color 0.3s, transform 0.1s;
+}
+
+main .left .review.clicked {
+    background-color: #61dafb;
+    transform: scale(0.95);
+}
+
+main .right {
+    background-color: #7d7b7b;
+    padding: 1rem 2rem;
+    overflow: auto;
+    flex-basis: 60%;
+}
